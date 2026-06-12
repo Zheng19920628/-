@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生物实验 - 小学科学虚拟实验</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🔬</div>
+        <span>小学科学虚拟实验</span>
+      </a>
+      <button class="nav-toggle" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="physics.html">物理实验</a></li>
+        <li><a href="chemistry.html">化学实验</a></li>
+        <li><a href="biology.html">生物实验</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero" style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #52b788 100%);">
+    <div class="container">
+      <div class="hero-badge">🌱 生物实验</div>
+      <h1>探索生命的奥秘</h1>
+      <p>观察植物生长、动物行为和生态系统，培养科学观察与记录能力</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="experiment-grid">
+
+        <!-- 实验1：植物生长 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">🌻</div>
+            <h3>实验一：植物的生长周期</h3>
+            <span class="grade-tag">三下</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>追踪植物从种子到开花结果的完整生命周期，理解植物生长需要阳光、水分和养分。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 15 分钟</span>
+              <span>📋 生命周期</span>
+            </div>
+            <ol class="steps-list">
+              <li>点击各生长阶段，观察植物形态变化</li>
+              <li>记录每个阶段的特征</li>
+              <li>思考：每个阶段需要什么条件？</li>
+              <li>联系生活：你见过的植物生长过程</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas">
+                <div class="plant-stages">
+                  <div class="plant-stage active">
+                    <span class="plant-emoji">🌰</span>
+                    <span>种子</span>
+                  </div>
+                  <div class="plant-stage">
+                    <span class="plant-emoji">🌱</span>
+                    <span>发芽</span>
+                  </div>
+                  <div class="plant-stage">
+                    <span class="plant-emoji">🌿</span>
+                    <span>生长</span>
+                  </div>
+                  <div class="plant-stage">
+                    <span class="plant-emoji">🌸</span>
+                    <span>开花</span>
+                  </div>
+                  <div class="plant-stage">
+                    <span class="plant-emoji">🍎</span>
+                    <span>结果</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lab-result" id="plant-result">🌰 种子吸水膨胀，准备萌发。</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 实验2：种子萌发 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">🫘</div>
+            <h3>实验二：种子萌发条件</h3>
+            <span class="grade-tag">五上</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>设计对照实验，探究种子萌发是否需要水分、适宜温度和空气。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 20 分钟</span>
+              <span>📋 对照实验</span>
+            </div>
+            <ol class="steps-list">
+              <li>设置四组实验：正常、缺水、缺空气、低温</li>
+              <li>点击各组观察种子状态</li>
+              <li>比较哪组种子能正常萌发</li>
+              <li>总结：种子萌发需要的三个条件</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas" style="padding: 20px;">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; width: 100%; max-width: 360px;">
+                  <button style="padding: 16px; border: 2px solid #52b788; border-radius: 12px; background: rgba(82,183,136,0.2); color: #fff; cursor: pointer; font-family: inherit;" onclick="document.getElementById('seed-result').textContent='✅ 正常组：有水分、适宜温度、充足空气，种子成功萌发！'">
+                    🌱 正常条件
+                  </button>
+                  <button style="padding: 16px; border: 2px solid #e63946; border-radius: 12px; background: rgba(230,57,70,0.2); color: #fff; cursor: pointer; font-family: inherit;" onclick="document.getElementById('seed-result').textContent='❌ 缺水组：没有水分，种子无法萌发。'">
+                    🏜️ 缺少水分
+                  </button>
+                  <button style="padding: 16px; border: 2px solid #e63946; border-radius: 12px; background: rgba(230,57,70,0.2); color: #fff; cursor: pointer; font-family: inherit;" onclick="document.getElementById('seed-result').textContent='❌ 缺空气组：种子被水淹没缺少空气，无法萌发。'">
+                    💧 缺少空气
+                  </button>
+                  <button style="padding: 16px; border: 2px solid #e63946; border-radius: 12px; background: rgba(230,57,70,0.2); color: #fff; cursor: pointer; font-family: inherit;" onclick="document.getElementById('seed-result').textContent='❌ 低温组：温度过低，种子处于休眠状态。'">
+                    🧊 温度过低
+                  </button>
+                </div>
+              </div>
+              <div class="lab-result" id="seed-result">👆 点击各实验组，比较种子在不同条件下的萌发情况。</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 实验3：食物链 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">🦊</div>
+            <h3>实验三：食物链与生态系统</h3>
+            <span class="grade-tag">六上</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>构建简单食物链，理解能量流动和生物之间的相互依存关系。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 15 分钟</span>
+              <span>📋 生态系统</span>
+            </div>
+            <ol class="steps-list">
+              <li>认识生产者（植物）、消费者（动物）</li>
+              <li>按"被吃 → 吃"的关系排列生物</li>
+              <li>构建完整食物链</li>
+              <li>思考：如果某一环节消失会怎样？</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas" style="flex-direction: column; gap: 16px; padding: 24px;">
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; font-size: 1.8rem;">
+                  <span>🌿</span><span style="color: var(--accent);">→</span>
+                  <span>🐛</span><span style="color: var(--accent);">→</span>
+                  <span>🐸</span><span style="color: var(--accent);">→</span>
+                  <span>🦅</span>
+                </div>
+                <div class="lab-controls">
+                  <button onclick="document.getElementById('chain-result').textContent='🌿 草是生产者，通过光合作用制造有机物，是食物链的起点。'">🌿 生产者</button>
+                  <button onclick="document.getElementById('chain-result').textContent='🐛 毛虫吃草，是初级消费者，属于食物链的第二环节。'">🐛 消费者</button>
+                  <button onclick="document.getElementById('chain-result').textContent='⚠️ 如果青蛙消失，毛虫会大量繁殖，草被过度啃食，生态平衡被破坏！'">❓ 如果缺少青蛙？</button>
+                </div>
+              </div>
+              <div class="lab-result" id="chain-result">🔗 点击按钮，了解食物链中各生物的角色和相互关系。</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">🔬</div>
+          <span>小学科学虚拟实验</span>
+        </div>
+        <p>面向小学科学教师与学生的虚拟实验平台，让科学探究触手可及。</p>
+      </div>
+      <div class="footer-links">
+        <h4>实验分类</h4>
+        <a href="physics.html">物理实验</a>
+        <a href="chemistry.html">化学实验</a>
+        <a href="biology.html">生物实验</a>
+      </div>
+      <div class="footer-links">
+        <h4>快速链接</h4>
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+      </div>
+      <div class="footer-links">
+        <h4>适用年级</h4>
+        <a href="#">三年级</a>
+        <a href="#">四年级</a>
+        <a href="#">五年级</a>
+        <a href="#">六年级</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 小学科学虚拟实验平台 · 仅供教学使用</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/experiments.js"></script>
+</body>
+</html>

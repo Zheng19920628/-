@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我们 - 小学科学虚拟实验</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🔬</div>
+        <span>小学科学虚拟实验</span>
+      </a>
+      <button class="nav-toggle" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="physics.html">物理实验</a></li>
+        <li><a href="chemistry.html">化学实验</a></li>
+        <li><a href="biology.html">生物实验</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <div class="hero-badge">📖 关于平台</div>
+      <h1>关于我们</h1>
+      <p>致力于为小学科学教育提供优质的虚拟实验资源</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h3>平台简介</h3>
+          <p>「小学科学虚拟实验」是一个面向小学科学教师和学生的在线实验平台。我们深知在小学科学教学中，实验器材不足、安全风险、课堂时间有限等现实困难。因此，我们开发了这套基于网页的虚拟实验系统，让教师可以在教室轻松演示，学生可以在课后反复练习。</p>
+
+          <h3>设计理念</h3>
+          <ul>
+            <li>安全第一：所有实验在虚拟环境中完成，消除安全隐患</li>
+            <li>课标对齐：实验内容对应三至六年级科学教材</li>
+            <li>探究导向：强调动手操作与现象观察，而非死记硬背</li>
+            <li>简洁易用：无需安装，打开浏览器即可使用</li>
+          </ul>
+
+          <h3>适用对象</h3>
+          <p>本平台主要服务于：</p>
+          <ul>
+            <li>小学科学教师 — 课堂演示、备课参考</li>
+            <li>小学生 — 课前预习、课后复习、自主探究</li>
+            <li>家长 — 家庭科学启蒙、亲子互动</li>
+          </ul>
+
+          <div class="about-stats" style="margin-top: 32px;">
+            <div class="stat-box">
+              <div class="stat-num">9+</div>
+              <div class="stat-label">虚拟实验</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">3</div>
+              <div class="stat-label">学科领域</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">4</div>
+              <div class="stat-label">覆盖年级</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">免费使用</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3 style="margin-bottom: 8px; color: var(--primary-dark);">意见反馈</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">欢迎提出宝贵建议，帮助我们改进平台</p>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">您的姓名</label>
+              <input type="text" id="name" name="name" placeholder="请输入姓名" required>
+            </div>
+            <div class="form-group">
+              <label for="role">身份</label>
+              <select id="role" name="role" required>
+                <option value="">请选择</option>
+                <option value="teacher">科学教师</option>
+                <option value="student">学生</option>
+                <option value="parent">家长</option>
+                <option value="other">其他</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">留言内容</label>
+              <textarea id="message" name="message" placeholder="请描述您的建议或遇到的问题..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">提交反馈</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #eef5f1; padding-top: 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">使用指南</span>
+        <h2>如何开始？</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon green">1️⃣</div>
+          <h3>选择实验</h3>
+          <p>从导航栏进入物理、化学或生物实验页面，浏览实验列表，选择适合当前教学内容的实验。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon orange">2️⃣</div>
+          <h3>阅读步骤</h3>
+          <p>每个实验都附有详细的操作步骤和科学原理说明，建议教师课前熟悉实验流程。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon blue">3️⃣</div>
+          <h3>动手操作</h3>
+          <p>在虚拟实验台上点击、选择、拖拽，观察实验现象，记录实验结果，完成探究过程。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon purple">4️⃣</div>
+          <h3>总结讨论</h3>
+          <p>实验结束后，引导学生总结现象背后的科学原理，联系生活实际，深化理解。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">🔬</div>
+          <span>小学科学虚拟实验</span>
+        </div>
+        <p>面向小学科学教师与学生的虚拟实验平台，让科学探究触手可及。</p>
+      </div>
+      <div class="footer-links">
+        <h4>实验分类</h4>
+        <a href="physics.html">物理实验</a>
+        <a href="chemistry.html">化学实验</a>
+        <a href="biology.html">生物实验</a>
+      </div>
+      <div class="footer-links">
+        <h4>快速链接</h4>
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+      </div>
+      <div class="footer-links">
+        <h4>适用年级</h4>
+        <a href="#">三年级</a>
+        <a href="#">四年级</a>
+        <a href="#">五年级</a>
+        <a href="#">六年级</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 小学科学虚拟实验平台 · 仅供教学使用</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

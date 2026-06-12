@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>化学实验 - 小学科学虚拟实验</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🔬</div>
+        <span>小学科学虚拟实验</span>
+      </a>
+      <button class="nav-toggle" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="physics.html">物理实验</a></li>
+        <li><a href="chemistry.html">化学实验</a></li>
+        <li><a href="biology.html">生物实验</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero" style="background: linear-gradient(135deg, #d62828 0%, #f77f00 50%, #fcbf49 100%);">
+    <div class="container">
+      <div class="hero-badge">🧪 化学实验</div>
+      <h1>观察物质的变化</h1>
+      <p>在安全虚拟环境中探索溶解、酸碱、状态变化等化学现象</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="experiment-grid">
+
+        <!-- 实验1：溶解 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">🧂</div>
+            <h3>实验一：溶解的快慢</h3>
+            <span class="grade-tag">四下</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>探究影响物质溶解速度的因素：温度、搅拌、颗粒大小等。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 15 分钟</span>
+              <span>📋 溶解</span>
+            </div>
+            <ol class="steps-list">
+              <li>向清水中加入一勺盐，观察溶解过程</li>
+              <li>继续加盐，观察溶液的变化</li>
+              <li>尝试加热水，比较溶解速度</li>
+              <li>思考：怎样让盐更快溶解？</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas">
+                <div class="dissolve-cup" id="dissolve-cup">
+                  <div class="dissolve-liquid" id="dissolve-liquid" style="height: 40%;"></div>
+                </div>
+              </div>
+              <div class="lab-controls">
+                <button data-dissolve="add-salt">🧂 加盐</button>
+                <button data-dissolve="add-hot">🌡️ 加热水</button>
+                <button data-dissolve="reset">🔄 重置</button>
+              </div>
+              <div class="lab-result" id="dissolve-result">💧 清水中还没有溶解任何物质。</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 实验2：pH指示剂 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">🎨</div>
+            <h3>实验二：酸碱指示剂</h3>
+            <span class="grade-tag">六下</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>用紫色石蕊试液区分酸性、碱性和中性溶液，建立酸碱概念。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 10 分钟</span>
+              <span>📋 酸碱性质</span>
+            </div>
+            <ol class="steps-list">
+              <li>观察紫色石蕊试液的颜色</li>
+              <li>分别滴入药液：柠檬汁、肥皂水、纯水、醋</li>
+              <li>记录颜色变化：变红（酸性）、变蓝（碱性）、不变（中性）</li>
+              <li>思考：生活中还有哪些酸性或碱性物质？</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas" style="flex-direction: column; gap: 20px; padding: 24px;">
+                <div id="ph-indicator" style="width: 120px; height: 30px; background: #9b59b6; border-radius: 15px; transition: 0.5s;"></div>
+                <div class="ph-strip">
+                  <div class="ph-item" data-ph="lemon" style="background: rgba(255,107,107,0.3);">
+                    🍋
+                    <div class="ph-label">柠檬汁</div>
+                  </div>
+                  <div class="ph-item" data-ph="soap" style="background: rgba(78,205,196,0.3);">
+                    🧼
+                    <div class="ph-label">肥皂水</div>
+                  </div>
+                  <div class="ph-item" data-ph="water" style="background: rgba(149,225,211,0.3);">
+                    💧
+                    <div class="ph-label">纯水</div>
+                  </div>
+                  <div class="ph-item" data-ph="vinegar" style="background: rgba(254,202,87,0.3);">
+                    🫙
+                    <div class="ph-label">醋</div>
+                  </div>
+                </div>
+              </div>
+              <div class="lab-result" id="ph-result">👆 点击上方液体，观察石蕊试液的颜色变化。</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 实验3：水的三态变化 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">❄️</div>
+            <h3>实验三：水的三态变化</h3>
+            <span class="grade-tag">三上</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>观察水在固态、液态、气态之间的转化，理解物态变化与温度关系。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 10 分钟</span>
+              <span>📋 物态变化</span>
+            </div>
+            <ol class="steps-list">
+              <li>观察冰块（固态）在室温下融化</li>
+              <li>加热水使水沸腾，产生水蒸气（气态）</li>
+              <li>水蒸气遇冷凝结成小水珠（液化）</li>
+              <li>思考：生活中还有哪些物态变化？</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas" style="flex-direction: column; gap: 12px; padding: 24px;">
+                <div id="water-state" style="font-size: 4rem; transition: 0.5s;">🧊</div>
+                <div class="lab-controls">
+                  <button onclick="setWaterState('ice', '🧊 固态：水在0°C以下结冰。')">❄️ 冰冻</button>
+                  <button onclick="setWaterState('liquid', '💧 液态：常温下水的状态。')">💧 常温</button>
+                  <button onclick="setWaterState('steam', '💨 气态：100°C水沸腾变成水蒸气。')">🔥 加热</button>
+                </div>
+              </div>
+              <div class="lab-result" id="water-result">🧊 点击按钮改变温度，观察水的状态变化。</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">🔬</div>
+          <span>小学科学虚拟实验</span>
+        </div>
+        <p>面向小学科学教师与学生的虚拟实验平台，让科学探究触手可及。</p>
+      </div>
+      <div class="footer-links">
+        <h4>实验分类</h4>
+        <a href="physics.html">物理实验</a>
+        <a href="chemistry.html">化学实验</a>
+        <a href="biology.html">生物实验</a>
+      </div>
+      <div class="footer-links">
+        <h4>快速链接</h4>
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+      </div>
+      <div class="footer-links">
+        <h4>适用年级</h4>
+        <a href="#">三年级</a>
+        <a href="#">四年级</a>
+        <a href="#">五年级</a>
+        <a href="#">六年级</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 小学科学虚拟实验平台 · 仅供教学使用</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/experiments.js"></script>
+  <script>
+    function setWaterState(state, text) {
+      const icons = { ice: '🧊', liquid: '💧', steam: '💨' };
+      document.getElementById('water-state').textContent = icons[state];
+      document.getElementById('water-result').textContent = text;
+    }
+  </script>
+</body>
+</html>

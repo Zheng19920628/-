@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>物理实验 - 小学科学虚拟实验</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🔬</div>
+        <span>小学科学虚拟实验</span>
+      </a>
+      <button class="nav-toggle" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="physics.html">物理实验</a></li>
+        <li><a href="chemistry.html">化学实验</a></li>
+        <li><a href="biology.html">生物实验</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <div class="hero-badge">⚡ 物理实验</div>
+      <h1>探索物理世界的规律</h1>
+      <p>通过虚拟实验认识声、光、电、磁等现象，理解物质运动的基本规律</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="experiment-grid">
+
+        <!-- 实验1：简单电路 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">💡</div>
+            <h3>实验一：简单电路</h3>
+            <span class="grade-tag">四上</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>认识电路的基本组成（电源、导线、用电器、开关），学习如何连接电路使灯泡发光。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 15 分钟</span>
+              <span>📋 电路组成</span>
+            </div>
+            <ol class="steps-list">
+              <li>观察电路各元件的名称和作用</li>
+              <li>点击选择电池、灯泡和开关</li>
+              <li>闭合开关，观察灯泡是否发光</li>
+              <li>思考：缺少哪个元件电路无法工作？</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas">
+                <div class="circuit-board" id="circuit-board">
+                  <div class="circuit-item" data-part="battery" title="电池">🔋</div>
+                  <div class="circuit-wire"></div>
+                  <div class="circuit-item" data-part="switch" title="开关（断开）">🔘</div>
+                  <div class="circuit-item" data-part="switch-on" title="闭合开关">✅</div>
+                  <div class="circuit-wire"></div>
+                  <div class="circuit-item bulb bulb-off" data-part="bulb" title="灯泡">💡</div>
+                  <div class="circuit-wire"></div>
+                </div>
+              </div>
+              <div class="lab-result" id="circuit-result">💡 请点击选择：电池、灯泡、开关，然后闭合开关组成完整电路。</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 实验2：浮力 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">🌊</div>
+            <h3>实验二：物体的沉浮</h3>
+            <span class="grade-tag">五下</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>通过比较不同材料物体在水中的沉浮现象，理解浮力与密度的关系。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 10 分钟</span>
+              <span>📋 浮力与密度</span>
+            </div>
+            <ol class="steps-list">
+              <li>观察水槽中的水位线</li>
+              <li>点击木块，观察它浮在水面</li>
+              <li>点击铁块，观察它沉入水底</li>
+              <li>思考：什么因素决定物体沉浮？</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas">
+                <div class="buoyancy-tank" id="buoyancy-tank">
+                  <div class="buoyancy-object wood" data-density="0.5" data-name="木块" style="top: 25%;">🪵</div>
+                  <div class="buoyancy-object iron" data-density="7.8" data-name="铁块" style="top: 25%;">⚙️</div>
+                </div>
+              </div>
+              <div class="lab-result" id="buoyancy-result">👆 点击木块或铁块，观察它们在水中的沉浮现象。</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 实验3：磁铁 -->
+        <article class="experiment-card">
+          <div class="experiment-card-header">
+            <div class="exp-icon">🧲</div>
+            <h3>实验三：磁铁的性质</h3>
+            <span class="grade-tag">二下</span>
+          </div>
+          <div class="experiment-card-body">
+            <p>认识磁铁能吸铁的特性，了解磁极同名相斥、异名相吸的规律。</p>
+            <div class="experiment-meta">
+              <span>⏱ 约 10 分钟</span>
+              <span>📋 磁性</span>
+            </div>
+            <ol class="steps-list">
+              <li>用磁铁靠近不同材料，记录哪些被吸引</li>
+              <li>将两根磁铁同极靠近，感受排斥力</li>
+              <li>将异极靠近，感受吸引力</li>
+              <li>思考：磁铁在生活中的应用有哪些？</li>
+            </ol>
+            <div class="lab-panel">
+              <div class="lab-panel-title">🖥️ 虚拟实验台</div>
+              <div class="lab-canvas" style="flex-direction: column; gap: 16px; padding: 20px;">
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                  <button class="lab-controls" style="all: unset; cursor: pointer; font-size: 2rem;" onclick="this.nextElementSibling.textContent='🧲 被吸住了！铁钉具有磁性。'" title="磁铁吸铁钉">🧲 → 🔩</button>
+                  <span style="color: var(--sky-light); font-size: 0.9rem; align-self: center;">点击左侧试试</span>
+                </div>
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                  <button style="padding: 12px 20px; border: none; border-radius: 8px; background: #e63946; color: #fff; cursor: pointer; font-family: inherit;" onclick="document.getElementById('magnet-result').textContent='❌ 同极相斥！N极与N极互相推开。'">N ← → N</button>
+                  <button style="padding: 12px 20px; border: none; border-radius: 8px; background: #457b9d; color: #fff; cursor: pointer; font-family: inherit;" onclick="document.getElementById('magnet-result').textContent='✅ 异极相吸！N极与S极互相吸引。'">N ← → S</button>
+                </div>
+              </div>
+              <div class="lab-result" id="magnet-result">🧲 点击上方按钮，探索磁铁吸引和排斥的现象。</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">🔬</div>
+          <span>小学科学虚拟实验</span>
+        </div>
+        <p>面向小学科学教师与学生的虚拟实验平台，让科学探究触手可及。</p>
+      </div>
+      <div class="footer-links">
+        <h4>实验分类</h4>
+        <a href="physics.html">物理实验</a>
+        <a href="chemistry.html">化学实验</a>
+        <a href="biology.html">生物实验</a>
+      </div>
+      <div class="footer-links">
+        <h4>快速链接</h4>
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+      </div>
+      <div class="footer-links">
+        <h4>适用年级</h4>
+        <a href="#">三年级</a>
+        <a href="#">四年级</a>
+        <a href="#">五年级</a>
+        <a href="#">六年级</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 小学科学虚拟实验平台 · 仅供教学使用</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/experiments.js"></script>
+</body>
+</html>
